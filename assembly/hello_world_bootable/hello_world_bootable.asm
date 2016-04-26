@@ -28,7 +28,7 @@ PrintCharacter:
 	int 0x10; call bios interruption 0x10(video interrupt)
 	ret
 ;;;;;;;;;;
-;	end  ;
+;   end  ;
 ;;;;;;;;;;
 
 HelloString db 'Hello world', 0 ;Set a string ended by a null char
