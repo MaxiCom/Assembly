@@ -22,7 +22,7 @@ PrintString:
 		ret
 
 PrintCharacter:
-	mov AH, 0x0E; Set the bios function code(0x0E = write char in tty mode) in AH
+	mov AH, 0x0E; Set the bios function code(0x0E of 0x10 interrupt is write char in tty mode) in AH
 	mov BH, 0x00
 	mov BL, 0x07
 	int 0x10; call bios interruption 0x10(video interrupt)
