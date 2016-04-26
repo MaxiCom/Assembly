@@ -2,6 +2,8 @@
 
 Quelques programmes en assembleur.
 
--Syntaxe intel
+-Syntaxe: Intel
 
--Compilateur nasm
+-Compilateur: Nasm
+
+-Emulateur: QEMU
