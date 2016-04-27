@@ -5,6 +5,9 @@
 ;;;;;;;;;;;;;
 ;  program  ;
 ;;;;;;;;;;;;;
+_start:
+	call loop
+
 loop:
 	mov AH, 0x00; move the bios function code(0x00 of 0x16 interrupt is read keyboard) to AH
 	int 0x16

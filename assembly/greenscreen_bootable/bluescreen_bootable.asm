@@ -4,21 +4,30 @@
 ;;;;;;;;;;;;;
 ;  program  ;
 ;;;;;;;;;;;;;
+_start:
+	call set_video_mode
+	call set_register_for_draw
+	call draw_green_screen
+	ret
+
 set_video_mode:
 	mov AX, 0x13; set video mode
 	int 0x10
+	ret
 
 set_register_for_draw:
 	mov AH, 0x0C; write pixel function
 	mov AL, 0x0A; vga color green
 	mov CX, 0 ; X position
 	mov DX, 0 ; Y position
+	ret
 
 draw_green_screen:
 	int 0x10 ; write pixel at CX position
 	inc CX; increase cx 
 	cmp CX, 64000; draw until cx reach 64000 (number of pixels)
 	jne draw_green_screen
+	ret
 ;;;;;;;;;;
 ;   end  ;
 ;;;;;;;;;;

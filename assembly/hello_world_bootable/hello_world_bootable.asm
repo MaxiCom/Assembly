@@ -5,8 +5,10 @@
 ;;;;;;;;;;;;;
 ;  program  ;
 ;;;;;;;;;;;;;
-mov SI, HelloString; move the hellostring(first char) address to SI(source index)
-call PrintString; call printString label
+_start:
+	mov SI, HelloString; move the hellostring(first char) address to SI(source index)
+	call PrintString; call printString label
+	ret
 
 PrintString:
 	next_character:
